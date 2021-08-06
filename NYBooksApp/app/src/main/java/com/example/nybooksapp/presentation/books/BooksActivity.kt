@@ -1,7 +1,11 @@
 package com.example.nybooksapp.presentation.books
 
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.nybooksapp.data.Book
 import com.example.nybooksapp.databinding.ActivityBooksBinding
 
 class BooksActivity : AppCompatActivity() {
@@ -11,7 +15,22 @@ class BooksActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBooksBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.toolbarMain.title = "Books"
-        setSupportActionBar(binding.toolbarMain)
+        recyclerView()
     }
+
+    private fun recyclerView() {
+        with(binding.recyclerViewMain) {
+            layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+            setHasFixedSize(true)
+            adapter = BooksAdapter(arrayListOf())
+        }
+    }
+
+//    fun getBooks(): List<Book> {
+//        return listOf(
+//            Book("Principe", "Ingrid"),
+//            Book("Granchange", "Guilherme"),
+//            Book("Arroz", "Feijao")
+//        )
+//    }
 }
