@@ -22,15 +22,11 @@ class BooksActivity : AppCompatActivity() {
         with(binding.recyclerViewMain) {
             layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
             setHasFixedSize(true)
-            adapter = BooksAdapter(arrayListOf())
+            adapter = BooksAdapter(arrayListOf(
+                Book("Livro 1", "Autor1"),
+                Book("Livro 2", "Autor2"),
+                Book("Livro 3", "Autor3")
+            ))
         }
     }
-
-//    fun getBooks(): List<Book> {
-//        return listOf(
-//            Book("Principe", "Ingrid"),
-//            Book("Granchange", "Guilherme"),
-//            Book("Arroz", "Feijao")
-//        )
-//    }
 }
