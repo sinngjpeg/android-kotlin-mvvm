@@ -2,7 +2,6 @@ package com.example.nybooksapp.presentation.books
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nybooksapp.data.Book
 import com.example.nybooksapp.databinding.ItemBooksBinding

@@ -16,7 +16,6 @@ class BooksActivity : AppCompatActivity() {
         binding = ActivityBooksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val viewModel: BooksViewModel = ViewModelProviders.of(this).get(BooksViewModel::class.java)
         viewModel.booksLiveData.observe(this, Observer {
             it?.let { books ->
