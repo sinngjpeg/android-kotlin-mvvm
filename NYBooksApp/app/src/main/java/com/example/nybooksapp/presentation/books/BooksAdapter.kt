@@ -8,7 +8,7 @@ import com.example.nybooksapp.data.Book
 import com.example.nybooksapp.databinding.ItemBooksBinding
 
 class BooksAdapter(
-    private val booksList: ArrayList<Book>
+    private val booksList: List<Book>
 ) :
     RecyclerView.Adapter<BooksAdapter.BooksViewHolder>() {
 
