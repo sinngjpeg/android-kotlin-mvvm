@@ -7,7 +7,8 @@ import com.example.nybooksapp.data.Book
 import com.example.nybooksapp.databinding.ItemBooksBinding
 
 class BooksAdapter(
-    private val booksList: List<Book>
+    private val booksList: List<Book>,
+    val onItemClickListener: ((book: Book) -> Unit)
 ) :
     RecyclerView.Adapter<BooksAdapter.BooksViewHolder>() {
 
@@ -20,7 +21,7 @@ class BooksAdapter(
             parent,
             false
         )
-        return BooksViewHolder(binding)
+        return BooksViewHolder(binding, onItemClickListener)
     }
 
     override fun getItemCount() = booksList.size
@@ -30,13 +31,18 @@ class BooksAdapter(
     }
 
     class BooksViewHolder(
-        private val binding: ItemBooksBinding
+        private val binding: ItemBooksBinding,
+        private val onItemClickListener: ((book: Book) -> Unit)
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindBooks(listItem: Book) = with(binding) {
             listItem.run {
                 binding.title.text = title
                 binding.author.text = author
+
+                itemView.setOnClickListener {
+                    onItemClickListener.invoke(listItem)
+                }
             }
         }
     }
