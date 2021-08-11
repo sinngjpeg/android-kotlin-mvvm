@@ -41,7 +41,7 @@ class BooksAdapter(
                 binding.author.text = author
 
                 itemView.setOnClickListener {
-                    onItemClickListener.invoke(listItem)
+                    onItemClickListener.invoke(this)
                 }
             }
         }

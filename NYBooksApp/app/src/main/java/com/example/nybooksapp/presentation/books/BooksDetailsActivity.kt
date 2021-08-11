@@ -14,7 +14,7 @@ class BooksDetailsActivity : AppCompatActivity() {
         binding = ActivityBooksDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.titleDetails.text = intent.getStringExtra(Intent.EXTRA_TITLE)
+        binding.titleDetails.text = intent.getStringExtra(EXTRA_TITLE)
         binding.descriptionDetails.text = intent.getStringExtra(EXTRA_DESCRIPTION)
     }
 
