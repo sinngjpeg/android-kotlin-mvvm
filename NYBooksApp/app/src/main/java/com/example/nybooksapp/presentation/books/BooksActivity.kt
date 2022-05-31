@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nybooksapp.R
 import com.example.nybooksapp.databinding.ActivityBooksBinding
 
 class BooksActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class BooksActivity : AppCompatActivity() {
         binding = ActivityBooksBinding.inflate(layoutInflater)
         setContentView(binding.root)
         tollBar = binding.toolbar
-        tollBar.title = "Books"
+        tollBar.title = getString(R.string.toolbar_name)
         setSupportActionBar(tollBar)
 
         val viewModel: BooksViewModel = ViewModelProviders.of(this).get(BooksViewModel::class.java)
@@ -35,9 +36,7 @@ class BooksActivity : AppCompatActivity() {
                             book.description
                         )
                         this@BooksActivity.startActivity(intent)
-
                     }
-
                 }
             }
         })
