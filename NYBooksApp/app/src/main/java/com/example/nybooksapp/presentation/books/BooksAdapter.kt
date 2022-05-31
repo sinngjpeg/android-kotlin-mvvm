@@ -39,7 +39,6 @@ class BooksAdapter(
             listItem.run {
                 binding.title.text = title
                 binding.author.text = author
-
                 itemView.setOnClickListener {
                     onItemClickListener.invoke(this)
                 }

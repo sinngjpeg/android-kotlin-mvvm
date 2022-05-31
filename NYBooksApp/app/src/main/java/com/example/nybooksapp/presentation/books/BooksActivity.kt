@@ -2,6 +2,7 @@ package com.example.nybooksapp.presentation.books
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,11 +11,15 @@ import com.example.nybooksapp.databinding.ActivityBooksBinding
 
 class BooksActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBooksBinding
+    private lateinit var tollBar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBooksBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        tollBar = binding.toolbar
+        tollBar.title = "Books"
+        setSupportActionBar(tollBar)
 
         val viewModel: BooksViewModel = ViewModelProviders.of(this).get(BooksViewModel::class.java)
         viewModel.booksLiveData.observe(this, Observer {

@@ -3,12 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Sinng/Documents/Projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/activity_books.xml" value="0.32592592592592595" />
-        <entry key="..\:/Users/Sinng/Documents/Projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/activity_books_details.xml" value="0.33" />
-        <entry key="..\:/Users/Sinng/Documents/Projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/activity_main.xml" value="0.20885416666666667" />
-        <entry key="..\:/Users/Sinng/Documents/Projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/item_book.xml" value="0.371875" />
-        <entry key="..\:/Users/Sinng/Documents/Projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/item_books.xml" value="0.371875" />
-        <entry key="..\:/Users/Sinng/Documents/Projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/teste.xml" value="0.371875" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/activity_books.xml" value="0.25" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/activity_books_details.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/android-kotlin-mvvm/NYBooksApp/app/src/main/res/layout/item_books.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>
